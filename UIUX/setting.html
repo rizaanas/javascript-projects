@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ><link rel="stylesheet" href="setting.css">
+    <title> E-video Setting </title>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h1>Personal Information</h1>
+            <p><strong>Name:</strong> Anas riza </p>
+            <p><strong>Age:</strong> 19 </p>
+            <p><strong>Location:</strong> Puttalam ,srilanka </p>
+        </div>
+    </center>
+    <center>
+        <div class="containerone">
+            <h1> Select Language:</h1>
+            <button class="language-button" onclick="changeLanguage('en')">English</button>
+            <button class="language-button" onclick="changeLanguage('fr')">French</button>
+            <button class="language-button" onclick="changeLanguage('it')">Italian</button>
+            <button class="language-button" onclick="changeLanguage('ko')">Korean</button>
+            <button class="language-button" onclick="changeLanguage('hi')">Hindi</button>
+            <button class="language-button" onclick="changeLanguage('ta')">Tamil</button>
+            <button class="language-button" onclick="changeLanguage('ar')">Arabic</button>
+            
+            <p id="content">Hello! Welcome to the E-video Language</p>
+        </div>
+    </center>
+    <center>
+        <div class="containertwo">
+            <h1>Theme Switcher</h1>
+            <div class="theme-switch">
+                <input type="radio" id="lightTheme" name="theme" value="light" checked>
+                <label for="lightTheme">Light</label>
+                <input type="radio" id="darkTheme" name="theme" value="dark">
+                <label for="darkTheme">Dark</label>
+            </div>
+            <div class="content">
+                <p> </p>
+            </div>
+        </div>
+
+        <div class="containerfour">
+            <h1>Select Payment Method</h1>
+            <div class="payment-method">
+                <div class="payment-option" onclick="selectPayment('Visa')">Visa</div>
+                <div class="payment-option" onclick="selectPayment('Mastercard')">Mastercard</div>
+                <div class="payment-option" onclick="selectPayment('E-Video Cloud Save')">E-Video Cloud Savings</div>
+            </div>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+        </div>
+
+        <a href="home.html" target="_blank" class="six"> Welcome to E-video home </a>
+    </center>
+
+
+
+    <script>
+        function changeLanguage(language) {
+            var content = document.getElementById("content");
+            switch (language) {
+                case 'en':
+                    content.innerText = "Hello! Welcome to the language page.";
+                    break;
+                case 'fr':
+                    content.innerText = "Bonjour! Bienvenue sur la page lingue.";
+                    break;
+                case 'it':
+                    content.innerText = "Ciao! Benvenuto alla pagina lingue.";
+                    break;
+                case 'ko':
+                    content.innerText = "안녕하세요! 다국어 페이지에 오신 것을 환영합니다.";
+                    break;
+                case 'hi':
+                    content.innerText = "नमस्ते! बहुभाषी पृष्ठ पर आपका स्वागत है।";
+                    break;
+                case 'ta':
+                    content.innerText = "வணக்கம்! மொழி பக்கத்தில் வருக!";
+                    break;
+                case 'ar':
+                    content.innerText = "مرحبًا! مرحبًا بك في الصفحة متعددة اللغات.";
+                    break;
+                default:
+                    content.innerText = "Hello! Welcome to the lingual page.";
+            }
+        }
+
+        const themeSwitch = document.querySelectorAll('input[name="theme"]');
+        const content = document.querySelector('.content');
+
+        themeSwitch.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'dark') {
+                    content.classList.add('dark-theme');
+                    document.body.style.backgroundColor = '#333';
+                } else {
+                    content.classList.remove('dark-theme');
+                    document.body.style.backgroundColor = '#fff';
+                }
+            });
+        });
+
+        let selectedPayment = '';
+
+        function selectPayment(paymentMethod) {
+            selectedPayment = paymentMethod;
+            // Add visual indication of selection (optional)
+            const paymentOptions = document.querySelectorAll('.payment-option');
+            paymentOptions.forEach(option => {
+                if (option.innerText === paymentMethod) {
+                    option.style.backgroundColor = '#0056b3';
+                } else {
+                    option.style.backgroundColor = '#007bff';
+                }
+            });
+        }
+
+        function proceedToPayment() {
+            if (selectedPayment !== '') {
+                alert('Proceeding to payment with ' + selectedPayment);
+                // Add code to proceed to payment process
+            } else {
+                alert('Please select a payment method.');
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>

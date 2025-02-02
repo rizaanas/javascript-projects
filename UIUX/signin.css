@@ -1,0 +1,83 @@
+.main{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: linear-gradient(125.32deg, #061700 18.38%, #9A2F6E 106.01%);
+    border-radius: 50px;
+}
+
+
+.logo{
+   position: absolute;
+    width: 235px;
+    height: 235px;
+    left: calc(50% - 235px/2 + 11.5px);
+    top: 29px;
+}
+
+.E{
+
+    position: absolute;
+    width: 506px;
+    height: 72px;
+    left: calc(50% - 506px/2 + 11px);
+    top: 260px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    /* identical to box height */
+    letter-spacing: 0.25em;
+    
+    color: #FFFFFF;
+    
+    }
+    
+    .container {
+        position: relative;
+        width: 200px;
+        margin: 20px auto; /* Adjust margin as needed */
+    }
+    
+    .one, .n, .u, .p, .d {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .one {
+        height: 500px;
+        top:389px;
+    }
+    
+    .n {
+        position: absolute;
+        top: 389px;
+    }
+    
+    .u {
+        position: absolute;
+        top: 490px; /* Adjust as needed */
+    }
+    
+    .p {
+        position: absolute;
+        top: 591px; /* Adjust as needed */
+    }
+    
+    .d {
+        position: absolute;
+        top: 675px; /* Adjust as needed */
+    }
+
+.button{
+
+    position: absolute;
+    width: 200px;
+    height: 75px;
+    left: calc(50% - 200px/2 + 18px);
+    top: 821px;
+    
+    }
+    

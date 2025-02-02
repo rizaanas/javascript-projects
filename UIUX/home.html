@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home page</title>
+</head>
+<body>
+    <div class="nav-container">
+        <img src="c:\Users\Riza\Downloads\_6485c070-5b8a-4f19-9780-011ab0fade05-removebg-preview.png" alt="logo image" class="logo">
+        <ul class="nav-links">
+            <li><a href="#search-container" class="nav-link"> Discovery</a></li>
+            <li><a href="#flex-container" class="nav-link"> Videomax</a></li>
+            <li><a href="#video-container" class="nav-link"> Em player </a></li>
+        </ul>
+    </div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search">
+        </div>
+        <div class="heading"> Welcome To E-video cloud </div>
+        <div class="three"> E-Video Cloud (EVC) is a state-of-the-art online video platform that harnesses the power of cloud technology.  
+            Our mission is to provide seamless streaming and storage solutions.  
+            EVC is poised to revolutionize the way we engage and deliver video content in the digital age.</div>
+        <div class="four"> Trending videos   </div>
+        
+
+        <div class="flex-container">
+            <video class="video" controls>
+              <source src="path_to_your_video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video class="videoone" controls>
+                <source src="path_to_your_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video class="videotwo" controls>
+                <source src="path_to_your_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+        <div id="video-container">
+            <video id="video-player" controls>
+              <source src="your-video-source.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div id="control-buttons">
+              <button id="pause-button">Pause</button>
+              <button id="undo-button">Undo</button>
+              <button id="redo-button">Redo</button>
+            </div>
+        </div>
+        <div class="link-container">
+            <a href="Epn.html" target="_blank">E-video producer network </a>
+            <a href="setting.html" target="_blank"> setting </a>
+            <a href="Library.html" target="_blank"> Library </a>
+        </div>
+
+        <div class="footer">
+            <p> E - video cloud 2024</p>
+        </div>
+          
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('video-player');
+        const pauseButton = document.getElementById('pause-button');
+        const undoButton = document.getElementById('undo-button');
+        const redoButton = document.getElementById('redo-button');
+
+        video.style.marginBottom = '10px';
+
+        pauseButton.addEventListener('click', function() {
+        if (video.paused) {
+            video.play();
+            pauseButton.textContent = 'Pause';
+        } else {
+            video.pause();
+            pauseButton.textContent = 'Play';
+        }
+    });
+
+        undoButton.addEventListener('click', function() {
+      // Your undo logic here
+        console.log('Undo clicked');
+        });
+
+        redoButton.addEventListener('click', function() {
+        // Your redo logic here
+        console.log('Redo clicked');
+        });
+    });
+
+    </script>
+</body>
+</html>
